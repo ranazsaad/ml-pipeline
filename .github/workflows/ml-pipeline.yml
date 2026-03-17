@@ -1,5 +1,4 @@
 # .github/workflows/ml-pipeline.yml
-# .github/workflows/ml-pipeline.yml
 name: ML Model CI
 
 on:

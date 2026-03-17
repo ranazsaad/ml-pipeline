@@ -1,4 +1,3 @@
-# .github/workflows/ml-pipeline.yml
 name: ML Model CI
 
 on:
@@ -11,6 +10,9 @@ jobs:
   validate-and-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -23,8 +25,7 @@ jobs:
         run: echo "No linter configured yet"
 
       - name: Model Dry Test
-        run: |
-          python -c "import torch; print('Model environment ready!')"
+        run: python -c "import torch; print('Model environment ready!')"
 
       - name: Upload README
         uses: actions/upload-artifact@v3

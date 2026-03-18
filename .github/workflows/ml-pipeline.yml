@@ -22,6 +22,11 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
+      - name: Linter Check
+        run: |
+          pip install flake8
+          flake8 .
+
       - name: Model Dry Test
         run: python -c "import torch; print('Model environment ready!')"
 

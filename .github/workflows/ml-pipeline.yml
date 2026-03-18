@@ -22,9 +22,6 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
-      - name: Linter Check
-        run: echo "No linter configured yet"
-
       - name: Model Dry Test
         run: python -c "import torch; print('Model environment ready!')"
 
